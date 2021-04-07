@@ -22,8 +22,8 @@ COPY scripts/weblogic_install12c.sh /scripts/weblogic_install12c.sh
 COPY scripts/create_domain11g.sh /scripts/create_domain11g.sh
 COPY scripts/create_domain12c.sh /scripts/create_domain12c.sh
 COPY scripts/open_debug_mode.sh /scripts/open_debug_mode.sh
-COPY jdks/$JDK_PKG .
-COPY weblogics/$WEBLOGIC_JAR .
+COPY packages/jdks/$JDK_PKG .
+COPY packages/weblogics/$WEBLOGIC_JAR .
 
 # 判断jdk是包（bin/tar.gz）weblogic包（11g/12c）载入对应脚本
 RUN if [ $JDK_PKG == *.bin ] ; then echo ****载入JDK bin安装脚本**** && cp /scripts/jdk_bin_install.sh /scripts/jdk_install.sh ; else echo ****载入JDK tar.gz安装脚本**** ; fi

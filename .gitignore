@@ -1,24 +1,25 @@
-Data/
-
+# Temp files.
+.idea
 .DS_Store
 
-logs
 
+
+# Log files.
+logs
 *.log
 
+# Data files and directorys.
+Data/
 data/
-
-.idea/
-
 public/
-
-jdks/
-
 middleware/
-
 supplemental/
-
 temp/
 
-weblogics/
+# Static files.
+packages/weblogics/*
+packages/jdks/*
+!packages/weblogics
+!packages/jdks
+
 
